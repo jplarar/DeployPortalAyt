@@ -13,7 +13,7 @@ security:
     providers:
             main:
                 entity:
-                    class:  Tec\Ayt\CoreBundle\Entity\Admin
+                    class:  Tec\Ayt\CoreBundle\Entity\User
                     property: username
 
     role_hierarchy:
@@ -35,10 +35,10 @@ security:
             form_login:
                 login_path:  /login
                 check_path:  /login/check
-                default_target_path: /
+                default_target_path: /success
             logout:
                 path:   /logout
-                target: /login
+                target: /
 
     access_control:
         # ROLE_SYSTEM_ADMIN
