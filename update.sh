@@ -17,7 +17,8 @@ echo - Fix permissions -
 
 echo - Clear cache -
  chmod 755 -R app/cache
- php app/console cache:clear --env=prod # bug
+ php app/console cache:clear --env=prod
+ php app/console cache:warmup --env=prod
  chmod 755 -R app/cache
 
 echo - Update database -
